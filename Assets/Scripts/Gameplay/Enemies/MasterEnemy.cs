@@ -45,7 +45,7 @@ public class MasterEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("ME PEGARON");
+        //Debug.Log("ME PEGARON");
         if(other.tag == "Weapon")
         {
             enemy.Damage(player.GetComponent<PlayerController>().currentWeapon.GetDamage());         

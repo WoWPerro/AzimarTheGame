@@ -9,8 +9,8 @@ public class RotateDelay : MonoBehaviour
     public float delay;
     void Start()
     {
-        rotation = gameObject.transform.rotation.z;
-        scale = gameObject.transform.localScale;
+        rotation = 0;
+        scale = new Vector3(1,1,1);
     }
 
     void OnEnable()

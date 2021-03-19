@@ -1701,6 +1701,30 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: A1
+    clip: {fileID: 8300000, guid: 0d12069f59fff9a488c5282dc4eec3ef, type: 3}
+    volume: 3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: A2
+    clip: {fileID: 8300000, guid: 39a8196eb40d0ee4591068b3ca97d824, type: 3}
+    volume: 3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: A3
+    clip: {fileID: 8300000, guid: 861f5f4c3aab09e428e6c2bfbec45d12, type: 3}
+    volume: 3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: A4
+    clip: {fileID: 8300000, guid: 41059a85fae209440a59e9cf6332fb1d, type: 3}
+    volume: 3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &1469766602
 Transform:
   m_ObjectHideFlags: 0
@@ -1709,7 +1733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469766600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1920.564, y: 1203.3239, z: -828.69135}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

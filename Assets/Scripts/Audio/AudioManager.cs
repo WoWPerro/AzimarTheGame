@@ -43,6 +43,19 @@ public class AudioManager : MonoBehaviour
         }      
     }
 
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null)
+        {
+            Debug.LogError("Sound with name: " + name + " not be found!");
+        }
+        else
+        {
+             s.source.Stop();
+        }      
+    }
+
     public IEnumerator Play(string name, float Fadein, float increaseAmount)
     {
             Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -56,6 +69,27 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.volume += increaseAmount;
                 yield return new WaitForSeconds(.1f);
+            }
+    }
+
+    public IEnumerator Stop(string name, float decreaseAmount)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+            if (s == null)
+            {
+                Debug.LogError("Sound with name: " + name + " not be found!");
+            }
+            
+            s.source.volume = 0;
+            while (s.source.volume >= 0)
+            {
+                s.source.volume -= decreaseAmount;
+                yield return new WaitForSeconds(.1f);
+            }
+
+            if(s.source.volume >= 0)
+            {
+                s.source.Stop();
             }
     }
 }
