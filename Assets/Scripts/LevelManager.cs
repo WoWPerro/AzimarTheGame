@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class LevelManager : MonoBehaviour
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
+            //float progress = Mathf.Clamp01(asyncLoad.progress / .9f);
+            //slider.value = progress;
             yield return null;
         }
     }

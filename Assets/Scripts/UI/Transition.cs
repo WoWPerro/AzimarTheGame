@@ -5,6 +5,7 @@ using UnityEngine;
 public class Transition : MonoBehaviour
 {
     public AnimationCurve curve;
+    public GameObject loading;
     int sceneindex;
     public void ChangeScene(int index)
     {
@@ -15,5 +16,6 @@ public class Transition : MonoBehaviour
     void TransitionScene()
     {
         FindObjectOfType<LevelManager>().LoadSceneAsync(sceneindex);
+        loading.SetActive(true);
     }
 }
