@@ -22,4 +22,9 @@ public class TextColorChanger : MonoBehaviour
     {
         tmpObj.color = Color.black;
     }
+
+    public void PLayUIEffect(string s)
+    {
+        FindObjectOfType<AudioManager>().Play(s);
+    }
 }
