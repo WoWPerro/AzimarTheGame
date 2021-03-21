@@ -34,6 +34,7 @@ public class UIColor : MonoBehaviour
             (false, 100),
             (false, 100)
         };
+        updateText();
     }
 
     public void Buy()
@@ -41,6 +42,7 @@ public class UIColor : MonoBehaviour
         if(buyedSkins[currentindex].owned)
         {
             ApplyPalette(currentindex);
+            updateText();
         }
         else
         {
@@ -48,6 +50,7 @@ public class UIColor : MonoBehaviour
             {
                 buyedSkins[currentindex].owned = true;
                 ApplyPalette(currentindex);
+                updateText();
             }
         }
     }
@@ -69,6 +72,7 @@ public class UIColor : MonoBehaviour
         {
             currentindex++;
             LeanTween.moveX(Palettes, -1920 * currentindex, .5f).setEase(curve);
+            updateText();
         }
         
     }
@@ -79,6 +83,7 @@ public class UIColor : MonoBehaviour
         {
             currentindex--;
             LeanTween.moveX(Palettes, -1920 * currentindex, .5f).setEase(curve);
+            updateText();
         }
         
     }

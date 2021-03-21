@@ -17,8 +17,15 @@ public class Proyectile : MonoBehaviour
 
     void OnEnable()
     {
-        rb.AddForce(player * vel);
-        StartCoroutine("WaitAndPrint");
+        try
+        {
+            rb.AddForce(player * vel);
+            StartCoroutine("WaitAndPrint");
+        }
+        catch
+        {
+
+        }
     }
 
      IEnumerator WaitAndPrint()

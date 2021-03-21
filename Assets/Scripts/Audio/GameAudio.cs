@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameAudio : MonoBehaviour
 {
-    private char zone = 'A';
+    private string zone = "A";
     public bool killer = true;
     public bool achiever = false;
     public bool explorer = false;
@@ -17,65 +17,23 @@ public class GameAudio : MonoBehaviour
         PlaySongs();
     }
 
-    void PlayPlayerSong()
-    {
-        string code = "";
-        code += zone;
-        if(killer)
-        {
-            code += "1";
-        }
-        else
-        {
-            code += "0";
-        }
-        if(achiever)
-        {
-            code += "1";
-        }
-        else
-        {
-            code += "0";
-        }
-        if(explorer)
-        {
-            code += "1";
-        }
-        else
-        {
-            code += "0";
-        }
-        if(socializer)
-        {
-            code += "1";
-        }
-        else
-        {
-            code += "0";
-        }
-        Debug.Log(code);
-        FindObjectOfType<AudioManager>().Play(code);
-    }
-
     void PlaySongs()
     {
-        string song = "";
-        song += zone;
         if(killer)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(zone + "1", 1, .01f));
         }
         if(achiever)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(zone + "2", 1, .01f));
         }
         if(explorer)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(zone + "3", 1, .01f));
         }
         if (socializer)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(zone + "4", 1, .01f));
         }
     }
 }
