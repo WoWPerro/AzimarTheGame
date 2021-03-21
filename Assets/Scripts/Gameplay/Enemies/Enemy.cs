@@ -8,6 +8,7 @@ public enum EnemyType
     RANGER,
     MAGICIAN,
     EVOKER,
+    BOSS1,
 }
 
 public abstract class Enemy

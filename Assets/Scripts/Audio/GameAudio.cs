@@ -59,21 +59,23 @@ public class GameAudio : MonoBehaviour
 
     void PlaySongs()
     {
+        string song = "";
+        song += zone;
         if(killer)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play("A1", 3, .1f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
         }
         if(achiever)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play("A2", 3, .1f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
         }
         if(explorer)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play("A3", 3, .1f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
         }
         if (socializer)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().Play("A4", 3, .1f));
+            StartCoroutine(FindObjectOfType<AudioManager>().Play(song += 1, 1, .01f));
         }
     }
 }

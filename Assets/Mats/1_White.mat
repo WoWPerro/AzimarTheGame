@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 1_White
   m_Shader: {fileID: -6465566751694194690, guid: af91d6fe99320514daca6c1457c29b5f, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,4 +35,5 @@ Material:
     m_Colors:
     - Color_16927bae33ef42e2ad6287225ba37169: {r: 0.1999822, g: 0.3962264, b: 0.2786215, a: 1}
     - Color_28624c7f8421455390b2fb184b4ccb9a: {r: 0.25142074, g: 1, b: 0, a: 1}
+    - _ColorTo: {r: 0.9372549, g: 0.2784314, b: 0.43529412, a: 1}
   m_BuildTextureStacks: []
